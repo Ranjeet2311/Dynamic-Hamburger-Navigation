@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* ----Logo-- */
+.logo {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo i {
+  font-size: 4rem;
+  margin: 5px auto;
+  padding: 8px 4px;
+  cursor: pointer;
+  color: #c31432;
+}
+.logo img:hover {
+  filter: grayscale(1);
+}
+
+/* ---Menu items --- */
+.navmenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+.navmenu .menu-items {
+  text-decoration: none;
+  color: grey;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0px 10px;
+}
+.navmenu .menu-items:hover {
+  color: #c31432;
+}
+.navmenu {
+  list-style: none;
+}
+
+/* _____Social__________ */
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c31432;
+  font-size: 2rem;
+  padding: 20px 8px;
+  /* width: 20%; */
+}
+.social-media i {
+  padding: 15px 8px;
+  cursor: pointer;
+}
+.iconFb :hover {
+  color: rgb(7, 119, 233);
+}
+.iconTw :hover {
+  color: rgb(29, 161, 242);
+}
+.iconYt :hover {
+  color: rgb(244, 22, 22);
+}
+
+/* -------Burger ---- */
+.burger {
+  position: absolute;
+  top: 5px;
+  right: 2%;
+  font-size: 4rem;
+  color: #c31432;
+  margin: 0px auto;
+  cursor: pointer;
+}
+
+.burger-item {
+  opacity: 0;
+}
+.burger-item:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.close-item {
+  color: #c31432;
+  position: absolute;
+  top: 0px;
+  right: 5%;
+  font-size: 4rem;
+  transform: skew(5, 4);
+  opacity: 0;
+}
+.close-item :hover {
+  transform: rotate(90deg) scale(1.5);
+  /* transform: scale(1.2); */
+  transition: all 0.8s ease-out;
+  color: grey;
+}
+
+/* ____________Screen _________ */
+
+@media screen and (max-width: 2500px) {
+  /* .navmenu li {
+    border: 2px solid white;
+    width: 100%;
+    box-shadow: 0px 0px 100px #f7f5f4;
+    text-align: center;
+  } */
+
+  .hide {
+    display: none;
+  }
+  .burger-item {
+    opacity: 1;
+  }
+  .close-item {
+    opacity: 1;
+  }
+}
+
+/* ____________Small Screen _________ */
+
+@media screen and (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navmenu {
+    flex-direction: column;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+  }
+  .navmenu li {
+    border: 2px solid white;
+    width: 100%;
+    box-shadow: 0px 0px 100px #f7f5f4;
+    text-align: center;
+  }
+
+  .hide {
+    display: none;
+  }
+  .burger-item {
+    opacity: 1;
+  }
+  .close-item {
+    opacity: 1;
+  }
+}
